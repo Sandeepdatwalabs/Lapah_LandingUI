@@ -6,7 +6,9 @@ const Footer = () => {
         <footer className="footer">
             <div className="container footer-container">
                 <div className="footer-brand">
-                    <div className="logo">lapah.ai</div>
+                    <div className="logo">
+                        lapah<span style={{ color: '#ec4899' }}>.</span>ai
+                    </div>
                     <p className="footer-desc">
                         Automating automotive customer service with human-like AI voice assistants.
                     </p>
@@ -32,9 +34,13 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+            {/* Massive Bottom Logo */}
+            <div className="footer-mega-logo">lapah.ai</div>
             <div className="footer-bottom container">
                 <p>&copy; {new Date().getFullYear()} Lapah AI. All rights reserved.</p>
             </div>
+
+
         </footer>
     );
 };
