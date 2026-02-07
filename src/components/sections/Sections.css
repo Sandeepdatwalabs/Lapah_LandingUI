@@ -1,0 +1,419 @@
+/* --- "SEAMLESS FLOW" VIBE EXPANSION --- */
+/* Extending the dark, glowing, floating aesthetic to all sections */
+
+/* --- GLOBAL: DARK ATMOSPHERE --- */
+.section-padding {
+    padding: 160px 0;
+    position: relative;
+    /* Deep space background for everything */
+    background: radial-gradient(circle at 50% 50%, #0f1016 0%, #000 100%);
+}
+
+.text-gradient-gold {
+    background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* --- 1. BENEFITS: "THE ORBITAL NEXUS" --- */
+/* Matching Seamless Flow: Floating text, connection lines, glowing core. */
+
+.benefits-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (min-width: 992px) {
+    .benefits-layout {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.benefits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    /* Airy spacing like Seamless Flow */
+    position: relative;
+}
+
+/* The Vertical Guide Line */
+.benefits-list::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+.benefit-item {
+    padding-left: 3rem;
+    position: relative;
+    /* cursor: pointer; */
+    transition: all 0.5s ease;
+    opacity: 0.5;
+}
+
+.benefit-item:hover,
+.benefit-item.active {
+    opacity: 1;
+}
+
+/* The Glowing Node (Matches Seamless Flow markers) */
+.benefit-item::before {
+    content: '';
+    position: absolute;
+    left: -4px;
+    top: 0.5em;
+    width: 9px;
+    height: 9px;
+    background: #000;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 0 5px #000;
+    /* Gap mask */
+}
+
+.benefit-item:hover::before,
+.benefit-item.active::before {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 5px #000, 0 0 20px var(--color-primary);
+}
+
+.benefit-title {
+    font-size: 2.5rem;
+    /* Heroic sizing */
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.benefit-desc {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    max-width: 500px;
+
+    /* Reveal transition */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.benefit-item:hover .benefit-desc,
+.benefit-item.active .benefit-desc {
+    max-height: 150px;
+    opacity: 1;
+    margin-top: 1rem;
+}
+
+.benefits-visual {
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* The Core Visual: Pulse Ring */
+.visual-circle-container {
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+
+.visual-circle {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transform: scale(0.5);
+    opacity: 0;
+    transition: all 1s ease;
+    filter: blur(5px);
+}
+
+.visual-circle.active {
+    opacity: 1;
+    transform: scale(1);
+    border-color: var(--circle-color);
+    box-shadow: 0 0 50px var(--circle-color), inset 0 0 20px var(--circle-color);
+    filter: blur(0);
+}
+
+/* --- 2. HOW IT WORKS: KEEPING "SEAMLESS FLOW" --- */
+/* (This section was liked, so strictly preserving its style) */
+.timeline-flow {
+    position: relative;
+    padding: 100px 0;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.timeline-flow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, #ec4899, #8b5cf6, transparent);
+    transform: translateX(-50%);
+    box-shadow: 0 0 30px #ec4899;
+    opacity: 0.5;
+}
+
+.flow-step {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 150px;
+    position: relative;
+}
+
+.flow-step:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.flow-content {
+    width: 40%;
+    padding: 0;
+    background: transparent;
+    border: none;
+    /* Ensure no cards */
+}
+
+.flow-step:nth-child(odd) .flow-content {
+    text-align: right;
+}
+
+.flow-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+.flow-desc {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+}
+
+.flow-marker {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: #000;
+    border: 2px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 20px white;
+    z-index: 2;
+    color: transparent;
+}
+
+
+/* --- 3. USE CASES: "THE HOLOGRAPHIC DECK" --- */
+/* Replacing blocks with a futuristic, sci-fi tab interface */
+
+.hologram-layout {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    gap: 4rem;
+}
+
+@media (min-width: 992px) {
+    .hologram-layout {
+        flex-direction: row;
+        align-items: center;
+        height: 600px;
+    }
+}
+
+.hologram-nav {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    /* Minimal gap */
+    position: relative;
+}
+
+/* Vertical decorative line for Nav */
+.hologram-nav::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.hologram-tab {
+    padding: 2rem 0 2rem 3rem;
+    /* cursor: pointer; */
+    border-left: 2px solid transparent;
+    transition: all 0.4s ease;
+    opacity: 0.4;
+    background: transparent;
+    /* No BG */
+}
+
+.hologram-tab:hover,
+.hologram-tab.active {
+    opacity: 1;
+}
+
+.hologram-tab.active {
+    border-left-color: var(--color-primary);
+    padding-left: 4rem;
+    /* Shift for emphasis */
+}
+
+.tab-number {
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.tab-title {
+    font-size: 2rem;
+    color: white;
+    font-weight: 700;
+}
+
+.tab-subtitle {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Stage: Floating Hologram */
+.hologram-stage {
+    flex: 1.5;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    /* Very subtle frame */
+    border-radius: 30px;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Inner Glow */
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.02), transparent 70%);
+}
+
+.hologram-icon {
+    width: 120px;
+    height: 120px;
+    filter: drop-shadow(0 0 40px var(--glow-color));
+}
+
+.stage-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+.stage-heading {
+    font-size: 2.5rem;
+    color: white;
+    margin: 2rem 0 1rem;
+}
+
+.stage-desc {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+
+/* --- 4. ENTERPRISE: "THE DEEP SPACE DASHBOARD" --- */
+/* Floating in void, no distraction */
+
+.enterprise-section {
+    padding: 100px 0;
+    perspective: 1500px;
+    text-align: center;
+}
+
+.product-showcase {
+    margin-top: 4rem;
+    height: 600px;
+    /* Heroic Tilt */
+    transform: rotateX(20deg) scale(0.95);
+    transition: transform 0.8s ease;
+}
+
+.product-showcase:hover {
+    transform: rotateX(10deg) scale(1) translateY(-20px);
+    /* Lifts up */
+}
+
+.product-frame {
+    background: #050505;
+    /* Pitch black */
+    border: 1px solid #333;
+    border-radius: 16px;
+    box-shadow:
+        0 0 0 2px #000,
+        0 40px 100px rgba(0, 0, 0, 0.9);
+    /* Heavy shadow */
+}
+
+.window-header {
+    background: #111;
+    border-bottom: 1px solid #222;
+}
+
+.dashboard-ui {
+    background: #080808;
+}
+
+/* Neon lines inside dashboard */
+.ui-line.bg-gradient {
+    box-shadow: 0 0 15px currentColor;
+}
+
+.enterprise-text-overlay {
+    position: relative;
+    margin-top: -50px;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem 3rem;
+    border-radius: 100px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.enterprise-text-overlay h2 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: white;
+}

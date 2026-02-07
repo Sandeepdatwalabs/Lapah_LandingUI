@@ -1,0 +1,69 @@
+:root {
+    /* Colors - Deep Maroon -> Purple -> Near-black */
+    --color-bg-dark: #050208;
+    --color-bg-darker: #020103;
+    --color-bg-accent: #0f0514;
+
+    --color-primary: #ec4899;
+    /* Pinkish accent */
+    --color-primary-dark: #be185d;
+    --color-secondary: #8b5cf6;
+    /* Purple accent */
+    --color-maroon: #581c3c;
+    --color-maroon-dark: #3a1026;
+
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #a1a1aa;
+    --color-text-muted: #71717a;
+
+    --color-glass: rgba(255, 255, 255, 0.05);
+    --color-glass-border: rgba(255, 255, 255, 0.1);
+    --color-glow: rgba(139, 92, 246, 0.5);
+
+    /* Gradients */
+    --gradient-bg: linear-gradient(135deg, var(--color-bg-darker) 0%, var(--color-maroon-dark) 50%, var(--color-bg-darker) 100%);
+    --gradient-text: linear-gradient(to right, #ec4899, #8b5cf6);
+    --gradient-glow: radial-gradient(circle at center, var(--color-glow) 0%, transparent 70%);
+
+    /* Typography */
+    --font-family-body: 'Inter', sans-serif;
+    --font-family-heading: 'Outfit', sans-serif;
+
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 2rem;
+    --font-size-4xl: 2.5rem;
+    --font-size-5xl: 3rem;
+    --font-size-6xl: 4rem;
+
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    --spacing-3xl: 4rem;
+    --spacing-4xl: 6rem;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+
+    /* Layout */
+    --container-width: 1200px;
+    --header-height: 80px;
+
+    /* Z-indices */
+    --z-negative: -1;
+    --z-normal: 1;
+    --z-overlay: 10;
+    --z-header: 100;
+    --z-modal: 1000;
+    --z-cursor: 9999;
+}

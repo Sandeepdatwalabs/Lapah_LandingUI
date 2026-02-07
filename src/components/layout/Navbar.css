@@ -1,0 +1,100 @@
+.navbar {
+    position: fixed;
+    top: 24px;
+    /* Floating effect */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: var(--container-width);
+    height: 64px;
+    z-index: var(--z-header);
+    background: rgba(15, 5, 20, 0.4);
+    /* Very sheer background */
+    backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    /* More subtle border */
+    border-radius: 100px;
+    /* Pillow/Pill shape */
+    display: flex;
+    align-items: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    /* Deep shadow */
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Ensure container fits the pill shape */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 var(--spacing-lg);
+}
+
+.logo {
+    font-family: var(--font-family-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo-img {
+    height: 56px;
+    /* Increased height for premium detail visibility */
+    width: auto;
+    display: block;
+}
+
+.dot {
+    color: var(--color-primary);
+    filter: drop-shadow(0 0 8px var(--color-primary));
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 6px 24px;
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-link {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+    padding: 4px 0;
+}
+
+.nav-link:hover {
+    color: var(--color-text-primary);
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+}
+
+/* Remove underline animation, replace with simpler glow */
+.nav-link::after {
+    display: none;
+}
+
+.nav-cta {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        top: 16px;
+        width: 95%;
+        height: 60px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
